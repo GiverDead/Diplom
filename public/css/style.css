@@ -1,0 +1,28 @@
+#canvas_container {
+
+}
+
+#canvas {
+    background: url("/images/canvas_background.jpg");
+    background-size: 15%;
+}
+
+.obj {
+    width: 100px;
+    height: 100px;
+    background: #000000;
+}
+
+.object_panel {
+    text-align: center;
+    width: 80%;
+    margin: 10%;
+}
+
+.object_panel:hover {
+    border: 1px solid black;
+}
+
+.object_panel_pic {
+    width: 100%;
+}
