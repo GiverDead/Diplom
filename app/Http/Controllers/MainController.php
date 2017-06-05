@@ -8,8 +8,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Objects_model;
 
+use App\Objects_model;
+use App\Users;
 
 class MainController extends Controller
 {
@@ -20,27 +21,22 @@ class MainController extends Controller
         $this->Objects = new Objects_model;
     }
 
-    public function getLoginPage()
-    {
-        return view('main.login');
-    }
-
     public function index()
     {
-        $cats = $this->Objects->getCats();
-        $objects = array();
-        foreach ($cats as &$cat) {
-            $cat_name = $cat;
-            $cat = [];
-            $cat['name'] = $cat_name;
-            $cat['objects'] = $this->Objects->getObjects($cat_name);
-            $objects = $cat['objects'];
-        }
-        $new_objects = [];
-        foreach ($objects as $object) {
-            $new_objects[$object['name']] = $object;
-        }
-        $new_objects = json_encode($new_objects);
-        return view('main.main_page', ["cats" => $cats, "objects" => $new_objects]);
+//        $cats = $this->Objects->getCats();
+//        $objects = array();
+//        foreach ($cats as &$cat) {
+//            $cat_name = $cat;
+//            $cat = [];
+//            $cat['name'] = $cat_name;
+//            $cat['objects'] = $this->Objects->getObjects($cat_name);
+//            $objects = $cat['objects'];
+//        }
+//        $new_objects = [];
+//        foreach ($objects as $object) {
+//            $new_objects[$object['name']] = $object;
+//        }
+//        $new_objects = json_encode($new_objects);
+//        return view('main.main_page', ["cats" => $cats, "objects" => $new_objects]);
     }
 }

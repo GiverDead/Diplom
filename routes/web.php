@@ -12,4 +12,7 @@
 */
 
 Route::get('/', 'MainController@index');
-Route::get('/login', 'MainController@getLoginPage');
+Route::get('/login', 'AuthController@getLoginPage');
+Route::get('/registration', 'AuthController@getRegistrationPage');
+Route::post('/login', 'AuthController@loginUser');
+Route::post('/loginFB', "AuthController@facebookLogin");

@@ -29,8 +29,8 @@ function myFacebookLogin() {
         FB.api('/me/?fields=email', 'get', {}, function (data) {
             $(function () {
                 if (typeof data.email != "undefined")
-                    $.post("/loginFB/", {email: data.email}, function () {
-                        location.reload();
+                    $.post("/loginFB", {email: data.email, _token: token}, function () {
+                        location.href = "/";
                     });
             });
         });

@@ -18,6 +18,11 @@
                             <input type="password" name="password" class="form-control" id="Password"
                                    placeholder="Password">
                         </div>
+                        <div class="form-group">
+                            <label for="Confirm password">Confirm password</label>
+                            <input type="password" name="password_conf" class="form-control" id="Confirm password"
+                                   placeholder="Password">
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <button type="Login" class="btn btn-default">login</button>
